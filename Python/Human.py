@@ -1,13 +1,19 @@
+#Pembuatan class Human yang akan menjadi parent dari SivitasAkademik
 class Human:
+    
+    # Inisialisasi atribut private
     __NIK = ""
     __nama = ""
     __jenis_kelamin = "-"
     
+    # Constructor untuk Class Human
     def __init__(self, NIK = "", nama = "", jenis_kelamin = "-"):
         self.__NIK = NIK
         self.__nama = nama
         self.__jenis_kelamin = jenis_kelamin
     
+    
+    # Setter dan Getter tiap atribut yang ada pada class Human
     def set_NIK(self, NIK):
         self.__NIK = NIK
     

@@ -1,14 +1,20 @@
 from Human import Human
 
+# Class SivitasAkademik yang menjadi turunan dari class Human
 class SivitasAkademik(Human):
+    
+    # Inisialisasi attribut private
     __asal_universitas = ""
     __email_edu = ""
     
+    # Construct class SivitasAkademik dengan tambahan fungsi super untuk mengconstruct class parentnya (Human)
     def __init__(self, NIK="", nama="", jenis_kelamin="-", asal_universitas="", email_edu = ""):
         super().__init__(NIK, nama, jenis_kelamin)
         self.__asal_universitas = asal_universitas
         self.__email_edu = email_edu
         
+    
+    # Setter dan Getter untuk attribut untuk class SivitasAkademik
     def set_asal_universitas(self, asal_universitas):
         self.__asal_universitas = asal_universitas
         

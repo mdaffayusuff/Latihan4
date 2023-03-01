@@ -1,16 +1,21 @@
 from SivitasAkademik import SivitasAkademik
 
+# Class Dosen sebagai turunan dari class SivitasAkademik
 class Dosen(SivitasAkademik):
+    
+    # Inisialisasi attribut private
     __NIP = ""
     __pend_terakhir = ""
     __keahlian = ""
     
+    # Contructor class Dosen dengan tambahan fungsi super untuk construct class parent (SivitasAkademik)
     def __init__(self, NIK="", nama="", jenis_kelamin="-", asal_universitas="", email_edu="", NIP="", pend_terakhir = "", keahlian = ""):
         super().__init__(NIK, nama, jenis_kelamin, asal_universitas, email_edu)
         self.__NIP = NIP
         self.__pend_terakhir = pend_terakhir
         self.__keahlian = keahlian
         
+    # Setter dan Getter untuk attribut private pada class Dosen
     def set_NIP(self, NIP):
         self.__NIP = NIP
     
