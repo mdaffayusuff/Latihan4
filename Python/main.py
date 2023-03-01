@@ -1,3 +1,8 @@
+# Saya Muhammad Daffa Yusuf Fadhilah dengan NIM 2100543 mengerjakan evaluasi Latihan 4
+# dalam mata kuliah Design Pemrograman Berorientasi Objek 2023
+# untuk keberkahanNya maka saya tidak melakukan kecurangan seperti
+# yang telah dispesifikasikan. Aamiin.
+
 from Prodi import Prodi
 from Course import Course
 from Mahasiswa import Mahasiswa
