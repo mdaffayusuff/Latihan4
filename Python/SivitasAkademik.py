@@ -15,4 +15,9 @@ class SivitasAkademik(Human):
     def set_email_edu(self, email_edu):
         self.__email_edu = email_edu
         
+    def get_asal_universitas(self):
+        return self.__asal_universitas
+    
+    def get_email_edu(self):
+        return self.__email_edu        
     
