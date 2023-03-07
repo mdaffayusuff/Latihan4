@@ -31,5 +31,5 @@ Class **Prodi** merupakan class yang menampung data suatu Program studi diantany
 
 
 ## **Ekskusi**
-Ekseskusi dijalankan dengahn membuat program main yang memasukan inputan untuk data data yang dibutuhkan tiap kelas secara hardcode dan ditampilkan secara langsung. Berikut adalah hasilnya : 
+Ekseskusi dijalankan dengan membuat program main yang memasukan inputan untuk data data yang dibutuhkan tiap kelas secara hardcode dan ditampilkan secara langsung. Berikut adalah hasilnya : 
 ![Hasil_Eksekusi](https://github.com/mdaffayusuff/Latihan4DPBO/blob/main/hasil_eksekusi_python.png?raw=true)
