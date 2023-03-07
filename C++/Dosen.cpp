@@ -9,7 +9,7 @@ using namespace std;
 //Membuat class Dosen dengan parent SivitasAkademik
 class Dosen : public SivitasAkademik
 {
-protected:
+private:
 
     //Membuat atribut yang dibutuhkan/ditambahkan dari parent
     string NIP;
@@ -19,12 +19,7 @@ protected:
 public:
     
     //Fungsi construct kosong
-    Dosen(){
-        this->NIK = "";
-        this->nama = "";
-        this->jenis_kelmain = '-';
-        this->asal_universitas = "";
-        this->email_edu = "";
+    Dosen() : SivitasAkademik("", "", '-', "", ""){
         this->NIP = "";
         this->pend_terakhir = "";
         this->keahlian = "";

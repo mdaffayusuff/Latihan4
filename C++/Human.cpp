@@ -8,7 +8,7 @@ using namespace std;
 //Membuat class Human
 class Human
 {
-protected:
+private:
 
     //Menambahkan attribut yang dibutuhkan
     string NIK;

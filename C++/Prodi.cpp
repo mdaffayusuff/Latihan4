@@ -7,7 +7,7 @@
 using namespace std;
 
 //Membuat class Course
-class Course
+class Prodi
 {
 private:
 
@@ -20,7 +20,7 @@ private:
 public:
     
     //Fungsi construct kosong
-    Course(){
+    Prodi(){
         this->nama_prodi = "";
         this->kode = "";
         this->fakultas = "";
@@ -28,7 +28,7 @@ public:
     }
 
     //Fungsi construct dengan parameter
-    Course(string nama_prodi, string kode, string fakultas, Course course){
+    Prodi(string nama_prodi, string kode, string fakultas, Course course){
         this->nama_prodi = nama_prodi;
         this->kode = kode;
         this->fakultas = fakultas;
@@ -53,7 +53,7 @@ public:
         this->fakultas = fakultas;
     }
 
-    void add_course(Course course){
+    void add_courses(Course course){
         this->courses.push_back(course);
     }
 
@@ -73,7 +73,7 @@ public:
         return this->courses;
     }
 
-    ~Course(){
+    ~Prodi(){
 
     }
 };

@@ -11,7 +11,7 @@ using namespace std;
 
 class SivitasAkademik : public Human
 {
-protected:
+private:
 
     ///Membuat atribut yang dibutuhkan/ditambah dari parent
     string asal_universitas;
@@ -20,10 +20,7 @@ protected:
 public:
 
     //Fungsi construct
-    SivitasAkademik(){
-        this->NIK = "";
-        this->nama = "";
-        this->jenis_kelmain = '-';
+    SivitasAkademik() : Human ("", "", '-'){
         this->asal_universitas = "";
         this->email_edu = "";
     }
