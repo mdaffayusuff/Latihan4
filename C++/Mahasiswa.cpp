@@ -1,43 +1,33 @@
-//Include untuk penggunaan string dan class SivitasAkademik
-#include <iostream>
-#include <string>
-#include "SivitasAkademik.cpp"
+/* Saya Muhammad Daffa Yusuf Fadhilah dengan NIM 2100543 mengerjakan evaluasi Latihan 4
+dalam mata kuliah Design Pemrograman Berorientasi Objek 2023
+untuk keberkahanNya maka saya tidak melakukan kecurangan seperti
+yang telah dispesifikasikan. Aamiin. */
 
-//Deklarasi std agar tidak perlu menulisnya kembali pada code
-using namespace std;
+#include "header.h"
 
-//Membuat class Mahasiswa dengan parent Sivitas Akademik
-class Mahasiswa : public SivitasAkademik
+// Fungsi construct kosong
+Mahasiswa::Mahasiswa() : SivitasAkademik("", "", '-', "", "")
 {
-private:
+    this->NIM = "";
+}
 
-    //Membuat atribut yang dibutuhkan/ditambahkan dari parent
-    string NIM;
+// Fungsi construct dengan parameter
+Mahasiswa::Mahasiswa(string NIK, string nama, char jenis_kelamin, string asal_universitas, string email_edu, string NIM) : SivitasAkademik(NIK, nama, jenis_kelamin, asal_universitas, email_edu)
+{
+    this->NIM = NIM;
+}
 
-public:
-    
-    //Fungsi construct kosong
-    Mahasiswa() : SivitasAkademik("", "", '-', "", ""){
-        this->NIM = "";
-    }
+// Setter dan getter tiap atribut yang ada di class ini
+void Mahasiswa::set_NIM(string NIM)
+{
+    this->NIM = NIM;
+}
 
-    //Fungsi construct dengan parameter
-    Mahasiswa(string NIK, string nama, char jenis_kelamin, string asal_universitas, string email_edu, string NIM) : SivitasAkademik(NIK, nama, jenis_kelamin, asal_universitas, email_edu){
-        this->NIM = NIM;
-    }
+string Mahasiswa::get_NIM()
+{
+    return this->NIM;
+}
 
-
-    //Setter dan getter tiap atribut yang ada di class ini
-    void set_NIM(string NIM)
-    {
-        this->NIM = NIM;
-    }
-
-    string get_NIM(){
-        return this->NIM;
-    }
-
-    ~Mahasiswa(){
-
-    }
-};
+Mahasiswa::~Mahasiswa()
+{
+}

@@ -1,65 +1,57 @@
-//Include untuk penggunaan string dan class SivitasAkademik
-#include <iostream>
-#include <string>
-#include "SivitasAkademik.cpp"
+/* Saya Muhammad Daffa Yusuf Fadhilah dengan NIM 2100543 mengerjakan evaluasi Latihan 4
+dalam mata kuliah Design Pemrograman Berorientasi Objek 2023
+untuk keberkahanNya maka saya tidak melakukan kecurangan seperti
+yang telah dispesifikasikan. Aamiin. */
 
-//Deklarasi std agar tidak perlu menulisnya kembali pada code
-using namespace std;
+#include "header.h"
 
-//Membuat class Dosen dengan parent SivitasAkademik
-class Dosen : public SivitasAkademik
+// Fungsi construct kosong
+Dosen::Dosen() : SivitasAkademik("", "", '-', "", "")
 {
-private:
+    this->NIP = "";
+    this->pend_terakhir = "";
+    this->keahlian = "";
+}
 
-    //Membuat atribut yang dibutuhkan/ditambahkan dari parent
-    string NIP;
-    string pend_terakhir;
-    string keahlian;
+// Fungsi construct dengan parameter
+Dosen::Dosen(string NIK, string nama, char jenis_kelamin, string asal_universitas, string email_edu, string NIP, string pend_terakhir, string keahlian) : SivitasAkademik(NIK, nama, jenis_kelamin, asal_universitas, email_edu)
+{
+    this->NIP = NIP;
+    this->pend_terakhir = pend_terakhir;
+    this->keahlian = keahlian;
+}
 
-public:
-    
-    //Fungsi construct kosong
-    Dosen() : SivitasAkademik("", "", '-', "", ""){
-        this->NIP = "";
-        this->pend_terakhir = "";
-        this->keahlian = "";
-    }
+// Setter dan getter tiap atribut yang ada di class ini
+void Dosen::set_NIP(string NIP)
+{
+    this->NIP = NIP;
+}
 
-    //Fungsi construct dengan parameter
-    Dosen(string NIK, string nama, char jenis_kelamin, string asal_universitas, string email_edu, string NIP, string pend_terakhir, string keahlian) : SivitasAkademik(NIK, nama, jenis_kelamin, asal_universitas, email_edu){
-        this->NIP = NIP;
-        this->pend_terakhir = pend_terakhir;
-        this->keahlian = keahlian;
-    }
+void Dosen::set_pend_terakhir(string pend_terakhir)
+{
+    this->pend_terakhir = pend_terakhir;
+}
 
+void Dosen::set_keahlian(string keahlian)
+{
+    this->keahlian = keahlian;
+}
 
-    //Setter dan getter tiap atribut yang ada di class ini
-    void set_NIP(string NIP)
-    {
-        this->NIP = NIP;
-    }
+string Dosen::get_NIP()
+{
+    return this->NIP;
+}
 
-    void set_pend_terakhir(string pend_terakhir){
-        this->pend_terakhir = pend_terakhir;
-    }
+string Dosen::get_pend_terakhir()
+{
+    return this->pend_terakhir;
+}
 
-    void set_keahlian(string keahlian){
-        this->keahlian = keahlian;
-    }
+string Dosen::get_keahlian()
+{
+    return this->keahlian;
+}
 
-    string get_NIP(){
-        return this->NIP;
-    }
-
-    string get_pend_terakhir(){
-        return this->pend_terakhir;
-    }
-
-    string get_keahlian(){
-        return this->keahlian;
-    }
-
-    ~Dosen(){
-
-    }
-};
+Dosen::~Dosen()
+{
+}

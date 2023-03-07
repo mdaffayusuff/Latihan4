@@ -1,79 +1,70 @@
-//Include untuk penggunaan string, list, class Mahasiswa, dan class Dosen
-#include <iostream>
-#include <string>
-#include <bits/stdc++.h>
-#include "Course.cpp"
-//Deklarasi std agar tidak perlu menulisnya kembali pada code
-using namespace std;
+/* Saya Muhammad Daffa Yusuf Fadhilah dengan NIM 2100543 mengerjakan evaluasi Latihan 4
+dalam mata kuliah Design Pemrograman Berorientasi Objek 2023
+untuk keberkahanNya maka saya tidak melakukan kecurangan seperti
+yang telah dispesifikasikan. Aamiin. */
 
-//Membuat class Course
-class Prodi
+#include "header.h"
+
+// Fungsi construct kosong
+Prodi::Prodi()
 {
-private:
+    this->nama_prodi = "";
+    this->kode = "";
+    this->fakultas = "";
+    this->courses.clear();
+}
 
-    //Membuat atribut yang dibutuhkan/ditambahkan dari parent
-    string nama_prodi;
-    string kode;
-    string fakultas;
-    list<Course> courses;
+// Fungsi construct dengan parameter
+Prodi::Prodi(string nama_prodi, string kode, string fakultas, Course course)
+{
+    this->nama_prodi = nama_prodi;
+    this->kode = kode;
+    this->fakultas = fakultas;
+    this->courses.clear();
+    this->courses.push_back(course);
+}
 
-public:
-    
-    //Fungsi construct kosong
-    Prodi(){
-        this->nama_prodi = "";
-        this->kode = "";
-        this->fakultas = "";
-        this->courses.clear();
-    }
+// Setter dan getter tiap atribut yang ada di class ini
+void Prodi::set_nama_prodi(string nama_prodi)
+{
+    this->nama_prodi = nama_prodi;
+}
 
-    //Fungsi construct dengan parameter
-    Prodi(string nama_prodi, string kode, string fakultas, Course course){
-        this->nama_prodi = nama_prodi;
-        this->kode = kode;
-        this->fakultas = fakultas;
-        this->courses.clear();
-        this->courses.push_back(course);
-    }
+void Prodi::set_kode(string kode)
+{
+    this->kode = kode;
+}
 
+void Prodi::set_fakultas(string fakultas)
+{
+    this->fakultas = fakultas;
+}
 
-    //Setter dan getter tiap atribut yang ada di class ini
-    void set_nama_prodi(string nama_prodi)
-    {
-        this->nama_prodi = nama_prodi;
-    }
+void Prodi::add_courses(Course course)
+{
+    this->courses.push_back(course);
+}
 
-    void set_kode(string kode)
-    {
-        this->kode = kode;
-    }
+string Prodi::get_nama_prodi()
+{
+    return this->nama_prodi;
+}
 
-    void set_fakultas(string fakultas)
-    {
-        this->fakultas = fakultas;
-    }
+string Prodi::get_kode()
+{
+    return this->kode;
+}
 
-    void add_courses(Course course){
-        this->courses.push_back(course);
-    }
+string Prodi::get_fakultas()
+{
+    return this->fakultas;
+}
 
-    string get_nama_prodi(){
-        return this->nama_prodi;
-    }
+list<Course> Prodi::get_courses()
+{
+    return this->courses;
+}
 
-    string get_kode(){
-        return this->kode;
-    }
-
-    string get_fakultas(){
-        return this->fakultas;
-    }
-
-    list<Course> get_courses(){
-        return this->courses;
-    }
-
-    ~Prodi(){
-
-    }
-};
+Prodi::~Prodi()
+{
+}

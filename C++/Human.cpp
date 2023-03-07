@@ -1,63 +1,56 @@
-//Include untuk penggunaan string
-#include <iostream>
-#include <string>
+/* Saya Muhammad Daffa Yusuf Fadhilah dengan NIM 2100543 mengerjakan evaluasi Latihan 4
+dalam mata kuliah Design Pemrograman Berorientasi Objek 2023
+untuk keberkahanNya maka saya tidak melakukan kecurangan seperti
+yang telah dispesifikasikan. Aamiin. */
+#include "header.h"
 
-//Deklarasi std agar tidak perlu menulisnya kembali pada code
-using namespace std;
-
-//Membuat class Human
-class Human
+// Fungsi construct kosong
+Human ::Human()
 {
-private:
+    this->NIK = "";
+    this->nama = "";
+    this->jenis_kelmain = '-';
+}
 
-    //Menambahkan attribut yang dibutuhkan
-    string NIK;
-    string nama;
-    char jenis_kelmain;
+// Fungsi construct dengan parameter
+Human ::Human(string NIK, string nama, char jenis_kelamin)
+{
+    this->NIK = NIK;
+    this->nama = nama;
+    this->jenis_kelmain = jenis_kelamin;
+}
 
-public:
+// setter dan getter tiap atribut yang ada pada kelas ini
+void Human::set_NIK(string NIK)
+{
+    this->NIK = NIK;
+}
 
-    //Fungsi construct kosong
-    Human(){
-        this->NIK = "";
-        this->nama = "";
-        this->jenis_kelmain = '-';
-    }
+void Human::set_nama(string nama)
+{
+    this->nama = nama;
+}
 
-    //Fungsi construct dengan parameter
-    Human(string NIK, string nama, char jenis_kelamin){
-        this->NIK = NIK;
-        this->nama = nama;
-        this->jenis_kelmain - jenis_kelamin;
-    }
+void Human::set_jenis_kelamin(char jenis_kelamin)
+{
+    this->jenis_kelmain = jenis_kelamin;
+}
 
+string Human::get_NIK()
+{
+    return this->NIK;
+}
 
-    //setter dan getter tiap atribut yang ada pada kelas ini
-    void set_NIK(string NIK){
-        this->NIK = NIK;
-    }
+string Human::get_nama()
+{
+    return this->nama;
+}
 
-    void set_nama(string nama){
-        this->nama = nama;
-    }
+char Human::get_jenis_kelamin()
+{
+    return this->jenis_kelmain;
+}
 
-    void set_jenis_kelamin(char jenis_kelamin){
-        this->jenis_kelmain = jenis_kelamin;
-    }
-
-    string get_NIK(){
-        return this->NIK;
-    }
-
-    string get_nama(){
-        return this->nama;
-    }
-
-    char get_jenis_kelamin(){
-        return this->jenis_kelmain;
-    }
-
-    ~Human(){
-
-    }
-};
+Human::~Human()
+{
+}
